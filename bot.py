@@ -74,7 +74,7 @@ async def start():
         time = now.strftime("%H:%M:%S %p")
         await TechVJBot.send_message(
             chat_id=LOG_CHANNEL,
-            text=script.RESTART_TXT.format(today, time)
+            text=Script.RESTART_TXT.format(today, time)
         )
     except Exception as e:
         logging.warning(f"⚠️ Failed to send restart log: {e}")
@@ -98,6 +98,7 @@ if __name__ == '__main__':
         asyncio.run(start())
     except KeyboardInterrupt:
         logging.info('🛑 Bot Stopped. Goodbye 👋')
+
 
 
 
