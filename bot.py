@@ -25,7 +25,7 @@ logging.getLogger("aiohttp").setLevel(logging.WARNING)
 
 from pyrogram import idle
 from info import *
-from Script import *
+from Script import Script  # Script class import kar rahe hain
 from plugins import web_server
 from TechVJ.bot import TechVJBot, TechVJBackUpBot
 from TechVJ.util.keepalive import ping_server
@@ -98,5 +98,6 @@ if __name__ == '__main__':
         asyncio.run(start())
     except KeyboardInterrupt:
         logging.info('🛑 Bot Stopped. Goodbye 👋')
+
 
 
