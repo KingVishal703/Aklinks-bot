@@ -95,6 +95,9 @@ async def start():
 
 if __name__ == '__main__':
     try:
+        import nest_asyncio
+        nest_asyncio.apply()  # ye fix karta hai "attached to a different loop" error
+        import asyncio
         asyncio.run(start())
     except KeyboardInterrupt:
         logging.info('🛑 Bot Stopped. Goodbye 👋')
