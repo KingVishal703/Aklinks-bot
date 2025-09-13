@@ -1,4 +1,3 @@
-
 # Don't Remove Credit @VJ_Botz
 # Subscribe YouTube Channel For Amazing Bot @Tech_VJ
 # Ask Doubt on telegram @KingVJ01
@@ -13,7 +12,7 @@ ENV PYTHONUNBUFFERED=1
 RUN apt update && \
     apt upgrade -y && \
     apt install -y git && \
-    pip install --no-cache-dir -U pip
+    pip install --no-cache-dir -U pip && \
     pip install nest_asyncio
 
 # Create working directory and copy code
@@ -25,4 +24,3 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 # Default command to run the bot
 CMD ["python3", "bot.py"]
-
