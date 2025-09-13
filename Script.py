@@ -2,7 +2,7 @@
 # Subscribe YouTube Channel For Amazing Bot @Tech_VJ
 # Ask Doubt on telegram @KingVJ01
 
-class Script:
+class script:
     START_TXT = """<b>Hello {} 👋,
 
 ✏️ I am a Video Player Bot. I stream files on a website and help you earn unlimited money 💰.
