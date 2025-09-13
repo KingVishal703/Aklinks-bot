@@ -14,6 +14,7 @@ RUN apt update && \
     apt upgrade -y && \
     apt install -y git && \
     pip install --no-cache-dir -U pip
+    pip install nest_asyncio
 
 # Create working directory and copy code
 WORKDIR /VJ-Video-Player
@@ -24,3 +25,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 # Default command to run the bot
 CMD ["python3", "bot.py"]
+
