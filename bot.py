@@ -25,7 +25,7 @@ logging.getLogger("aiohttp").setLevel(logging.WARNING)
 
 from pyrogram import idle
 from info import *
-from Script import Script  # Script class import kar rahe hain
+from Script import script  # Script class import kar rahe hain
 from plugins import web_server
 from TechVJ.bot import TechVJBot, TechVJBackUpBot
 from TechVJ.util.keepalive import ping_server
@@ -74,7 +74,7 @@ async def start():
         time = now.strftime("%H:%M:%S %p")
         await TechVJBot.send_message(
             chat_id=LOG_CHANNEL,
-            text=Script.RESTART_TXT.format(today, time)
+            text=script.RESTART_TXT.format(today, time)
         )
     except Exception as e:
         logging.warning(f"⚠️ Failed to send restart log: {e}")
@@ -98,6 +98,7 @@ if __name__ == '__main__':
         asyncio.run(start())
     except KeyboardInterrupt:
         logging.info('🛑 Bot Stopped. Goodbye 👋')
+
 
 
 
